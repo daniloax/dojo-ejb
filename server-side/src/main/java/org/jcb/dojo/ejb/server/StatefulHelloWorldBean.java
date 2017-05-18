@@ -8,10 +8,7 @@ import javax.annotation.PreDestroy;
 import javax.ejb.PostActivate;
 import javax.ejb.PrePassivate;
 import javax.ejb.Remote;
-import javax.ejb.Schedule;
-import javax.ejb.Singleton;
 import javax.ejb.Stateful;
-import javax.ejb.Stateless;
 
 @Stateful
 @Remote(StatefulHelloWorld.class)

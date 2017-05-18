@@ -6,8 +6,6 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.ejb.Remote;
-import javax.ejb.Schedule;
-import javax.ejb.Singleton;
 import javax.ejb.Stateless;
 
 @Stateless
@@ -17,12 +15,13 @@ public class HelloWorldBean implements HelloWorld {
 List<String> nomes;
 	
 	@PostConstruct
-	private void incia(){
+	private void inicia(){
 		System.out.println("Inicia com @PostConstruct");
 		nomes = new ArrayList<>();
 	}
 	public String hello(String nome){
 		nomes.add(nome);
+		System.out.println(nome);
 		return "Alo "+ nome;
 	}
 	
